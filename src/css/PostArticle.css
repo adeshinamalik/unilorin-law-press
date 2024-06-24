@@ -1,0 +1,86 @@
+/* General container styling */
+.post-article-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input, textarea, select styling */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Error input border styling */
+.form-group .input-error {
+    border-color: red;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+/* Word count styling */
+.word-count {
+    font-size: 0.875em;
+    color: #666;
+    margin-top: 5px;
+    text-align: right;
+}
+
+/* Button styling */
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Heading styling */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}

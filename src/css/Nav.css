@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=Figtree:wght@300;400&family=Inter:wght@100..900&family=Montserrat&family=Mulish:wght@300&family=Schibsted+Grotesk:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=Figtree:wght@300;400&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat&family=Mulish:wght@300&family=Schibsted+Grotesk:wght@600&display=swap');
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Josefin Sans", sans-serif;
+    padding: 26px 22px;
+    align-items: center;
+
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.middle-link, .right-link {
+    display: flex;
+    gap: 60px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.signup{
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* //////////////////////////////////// */
+/* animation */
+:root {
+    --def-transition-duration: .2s;
+}
+
+
+nav {
+    z-index: 3;
+    /* width: 1216px; */
+    font-family: "Averta Demo" !important;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 3rem;
+    position: relative;
+    background-color: yellowgreen;
+    /* border */
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #A1A2A3;
+    display: inline-block;
+    padding: 1.5rem 0;
+}
+
+nav ul a:hover {
+    color: #E8E8E8;
+}
+
+.has-submenu {
+    position: relative;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* .has-submenu::after {
+    content: url('../icons/icon-arrow-down.svg');
+    opacity: .6;
+    height: 25px;
+} */
+
+.has-submenu:hover ul {
+    display: block;
+    transform: translateX(0rem);
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.has-submenu ul {
+    position: absolute;
+    top: 100%;
+    left: -2rem;
+    background-color: #212224;
+    border-radius: .5rem;
+    padding: .5rem;
+    display: block;
+    z-index: 1000;
+    transform: translateX(-1rem);
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: var(--def-transition-duration);
+    transition-timing-function: ease-in-out;
+    transition-property: opacity, visibility, transform;
+
+}
+
+.has-submenu ul a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    min-width: 15rem;
+    border-radius: .5rem;
+}
+
+.has-submenu ul a::after {
+    content: url(../icon/icon-arrow-right.svg);
+    height: 17px;
+    opacity: 0;
+}
+
+.has-submenu ul a:hover {
+    background-color: #2C2D2F;
+    padding: 1rem 1.5rem;
+}
+
+.has-submenu ul a:hover::after {
+    opacity: 1;
+}
+
+.has-submenu:hover::after {
+    opacity: 1;
+}
+
+.has-submenu:hover>a {
+    color: #E8E8E8;
+}
+
+
+nav ul a,
+.has-submenu ul,
+.has-submenu {
+    transition-duration: var(--def-transition-duration);
+    transition-timing-function: ease-in-out;
+}
+
+nav ul {
+    transition-property: transform;
+    transition-duration: var(--def-transition-duration);
+    transition-timing-function: ease-in-out;
+}
+
+/* /////////////////////////////////////// */
+
+/* //////////////////////////////////// */
+
+.login-link{
+    cursor: pointer;
+}

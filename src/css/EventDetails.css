@@ -1,0 +1,54 @@
+/* EventDetails.css */
+.event-detail {
+    padding: 20px;
+}
+
+.event-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.event-title {
+    margin-top: 0;
+    text-align: left; /* Align the title to the left */
+    font-weight: bold; /* Make the title bold */
+}
+
+.event-image {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.event-description p {
+    line-height: 1.6;
+    margin: 10px 0; /* Reduce spacing between paragraphs */
+}
+
+.event-detail-container p {
+    line-height: 1.6;
+}
+
+/* Additional styles to make headings bold */
+.event-date, .event-location, .event-organizer, .event-email {
+    font-weight: bold;
+}
+
+/* Bold headings within the event description */
+.bold-heading {
+    font-weight: bold;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+.not-found {
+    text-align: center;
+    padding: 20px;
+}

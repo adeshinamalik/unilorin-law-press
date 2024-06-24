@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.register-page {
+    width: 428px;
+    height: 900PX;
+    /* background-image: url('../images/hostelhome.svg'); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* display: none; */
+}
+
+/* .display-login {
+    display: block;
+}
+
+.dontdisplaylogin {
+    display: none;
+} */
+
+.remove-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0px;
+}
+
+.register-form {
+    width: 300px;
+    height: -webkit-fill-available;
+    background-color: #1A1A1A;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    min-height: 450px;
+    padding-top: 20px;
+}
+
+.register-container {
+    position: fixed;
+    z-index: 10;
+    width: 100vw!important;
+}
+
+.register-form>.theInput>input {
+    width: 252px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 20px;
+    background-color: #1D2226;
+    color: white;
+
+}
+
+
+.register-form>button {
+    width: 80%;
+    height: 52px;
+    background-color: #6D67D2;
+    border-radius: 10px;
+    font: 16px;
+    color: white;
+    border: none;
+
+}
+
+.register-form>button:hover {
+    /* background-color: TruliaSans; */
+    /* background-color: #564cff; */
+    background-color: #7e77f3;
+}
+
+.register-form>p {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.register-form>a {
+    color: #6D67D2;
+    text-decoration: none;
+}
+
+.grad {
+    background: linear-gradient(180deg, rgba(121, 110, 252, 0) 30%, rgba(90, 82, 187, 1) 60%, rgba(61 55, 126, 1) 100%);
+    height: 552px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    position: fixed;
+}
+
+.withgoogle1 {
+    padding: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.media1 {
+    text-align: center;
+    color: white;
+}
+
+.media1>p {
+    padding: 15px 0px;
+}
+
+.errorText {
+    /* color: #be5a5a; */
+    color: #890000;
+}
+
+.inputTag {
+    width: 252px;
+    height: 44px;
+    border-radius: 10px;
+    /* width: 80%; */
+    padding-left: 16px;
+    padding-right: 6px;
+    background-color: #1D2226;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputTag>input {
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.register-form .noerror {
+    border: 3.5px solid green;
+}
+
+.register-form>.theInput>.error {
+    border: 2px solid red;
+}
+
+.theErrors {
+    background-color: #1A1A1A;
+    background-color: #ED5153;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 500px;
+    color: #fff;
+    margin-bottom: 20px;
+    position: absolute;
+    left: 47%;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.theErrors>img {
+    padding: 20px;
+}
+
+.main-icon {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+    color: white;
+    text-decoration: none;
+}
+
+.popup {
+    color: red;
+}
+
+.pop {
+    color: red;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-top: 3px;
+}
+
+.theInput {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width:768px) {
+    body {
+        position: relative;
+        height: 100vh;
+    }
+
+    .container {
+        position: fixed;
+        /* background-image: url('../Images/frames-for-your-heart-FqqiAvJejto-unsplash.svg'); */
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        left: 0%;
+        top: 0%;
+        z-index: 2;
+        width: 100vw;
+    }
+
+    .register-page {
+        background-image: none;
+        /* height: 100%; */
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 3;
+    }
+
+    .grad {
+        background: none;
+    }
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}

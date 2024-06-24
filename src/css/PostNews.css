@@ -1,0 +1,131 @@
+/* .title {
+    background-color: white;
+}
+
+form {
+    width: 1000px;
+    border: 1px solid red;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form>div {
+    border: 1px solid red;
+    display: flex;
+}
+
+form>div>label {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid red;
+    text-wrap: nowrap;
+}
+
+form>div>input {
+    width: -webkit-fill-available;
+} */
+
+
+/* ////////////////////////////////////// */
+/* ////////////////////////////////////// */
+/* ////////////////////////////////////// */
+/* ////////////////////////////////////// */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.post-news-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #3498db;
+}
+
+input{
+    margin-bottom: 20px;
+}
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.input-error {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    background-color: black;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+form > .submit-button{
+    background-color: black;
+}
