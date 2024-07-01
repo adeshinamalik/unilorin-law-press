@@ -13,12 +13,10 @@
 @media (max-width: 1024px) {
     .App {
         width: 100vw;
-        border: 3px solid red;
         overflow-x: hidden;
     }
 
     .App>div {
-        border: 3px solid blue;
         width: 100%;
     }
 }
@@ -29,12 +27,10 @@
     }
     .grad{
         background: none!important;
-        /* border: 20px solid red; */
         display: fixed;
     }
     .menu-icon {
         display: block;
-        border: 2px solid red;
     }
 
     .middle-link {
@@ -73,13 +69,11 @@
 
     .feature-section {
         flex-direction: column;
-        border: 2px solid red;
         align-items: center;
     }
 
     .lastest-feature {
         flex-direction: column;
-        border: 2px solid red;
         align-items: center;
         width: 100%;
         /* margin-right: 50px; */
@@ -102,7 +96,6 @@
 
     .event-feature {
         flex-direction: column;
-        border: 2px solid red;
         /* align-items: center; */
         width: 100%;
     }
@@ -129,13 +122,11 @@
 
     .latest {
         width: 100%;
-        border: 2px solid green;
     }
 
     .lastest-feature>.latest>div>img {
         width: 100%;
         margin-top: 0px;
-        /* border: 1px solid red; */
     }
 
     .bottom>.others {
