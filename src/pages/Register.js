@@ -154,7 +154,7 @@ const Register = () => {
             <p>Register</p>
             <div className='theInput'>
               <input
-                className={fieldErrors.name ? "error" : "noerror"}
+                className={fieldErrors.name ? "error" : ""}
                 placeholder="Full Name"
                 type="text"
                 name="name"
@@ -165,7 +165,7 @@ const Register = () => {
             </div>
             <div className='theInput'>
               <input
-                className={fieldErrors.email ? "error" : "noerror"}
+                className={fieldErrors.email ? "error" : ""}
                 placeholder="Email Address"
                 type="text"
                 name="email"
@@ -175,7 +175,7 @@ const Register = () => {
               <span className='pop'>{fieldErrors.email && <div>{fieldErrors.email}</div>}</span>
             </div>
             <div className='theInput'>
-              <div className={"inputTag " + (fieldErrors.password ? "error" : "noerror")}>
+              <div className={"inputTag " + (fieldErrors.password ? "error" : "")}>
                 <input
                   placeholder='Password'
                   value={newUserCredentials.password}
@@ -192,7 +192,7 @@ const Register = () => {
               <span className='pop'>{fieldErrors.password && <div>{fieldErrors.password}</div>}</span>
             </div>
             <div className='theInput'>
-              <div className={"inputTag " + (fieldErrors.password ? "error" : "noerror")}>
+              <div className={"inputTag " + (fieldErrors.password ? "error" : "")}>
                 <input
                   placeholder="Re-type Password"
                   name="confirmPassword"

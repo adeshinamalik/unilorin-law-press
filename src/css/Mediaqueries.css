@@ -2,33 +2,14 @@
     .menu-icon {
         display: none;
     }
+
     .remove-background {
         width: 120vw;
         position: fixed;
-        left: 0px!important;
-    }
-    .logo{
-        width: 65px;
-        height: 65px;
-        /* border: 1px solid red; */
-        /* height: fit-content; */
-        position: absolute;
-        overflow: hidden;
-        border-radius: 50%;
-        left: 500px;
-        top: 500px;
-        border: 2px solid red;
-    }
-    .logo > img{
-        width: 100px;
-        position: relative;
-        left: 49%;
-        top: 49%;
-        transform: translate(-50%, -45%);
-        
+        left: 0px !important;
     }
 
-    .register-form{
+    .register-form {
         margin-top: 60px;
     }
 }
@@ -45,13 +26,19 @@
 }
 
 @media (max-width: 800px) {
-    .App > div > div  {
+    .register-form {
+        margin-top: 90px;
+    }
+
+    .App>div>div {
         padding: 0px 50px;
     }
-    .grad{
-        background: none!important;
+
+    .grad {
+        background: none !important;
         display: fixed;
     }
+
     .menu-icon {
         display: block;
     }
@@ -165,6 +152,37 @@
     .latest-section-text {
         width: 100%;
     }
+
+    .logo {
+        width: 84px;
+        height: 83px;
+        /* border: 1px solid red; */
+        /* height: fit-content; */
+        position: relative;
+        margin-bottom: 500px;
+        overflow: hidden;
+        border-radius: 50%;
+        left: 50% !important;
+        transform: translateX(-50%);
+        /* top:   500px; */
+        /* border: 2px solid red; */
+    }
+
+    .logo>img {
+        width: 130px;
+        position: relative;
+        left: 49%;
+        top: 49%;
+        transform: translate(-50%, -45%);
+
+    }
+
+    .theErrors {
+        position: relative !important;
+        left: 0% ! Important;
+        top: 800px !important;
+        width: 400px !important;
+    }
 }
 
 @media (max-width: 700px) {
@@ -199,16 +217,17 @@
 }
 
 @media (max-width: 500px) {
-    .App > div > div  {
+    .App>div>div {
         padding: 0px 30px;
     }
 
 }
 
 @media (max-width: 400px) {
-    .App > div > div  {
+    .App>div>div {
         padding: 0px 10px;
     }
+
     /* .App > div{
         position: relative;
     } */
