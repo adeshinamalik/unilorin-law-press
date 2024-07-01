@@ -39,6 +39,7 @@ body {
     background-color: rgba(0, 0, 0, 0.55);
     position: fixed;
     top: 0px;
+    left: 0px;
 }
 
 .register-form {
@@ -245,4 +246,7 @@ body {
 
 .display-none {
     display: none;
+}
+.register-page{
+    background-color: rgba(0, 0, 0, 0.85);
 }

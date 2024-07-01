@@ -4,6 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from './Firebase/Firebase';
 import Navigation from './Navigation';
 import '../css/ArticlePage.css';
+import Footer from './Footer';
 
 const ArticlePage = () => {
     const { id } = useParams();
@@ -62,6 +63,7 @@ const ArticlePage = () => {
                 <p><strong>Source:</strong> {article.source}</p>
                 <p><strong>Summary:</strong> {article.summary}</p>
             </div>
+            <Footer/>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { db } from './Firebase/Firebase';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import { images } from './Images';
+import Footer from './Footer';
 // import '../css/ArticlesList.css';
 
 const ArticlesList = () => {
@@ -65,7 +66,7 @@ const ArticlesList = () => {
                             )}
                         </div>
                         <div className='news-info'>
-                            <div className='news-date'>
+                            {/* <div className='news-date'>
                                 <div className='news-date'>{new Date(article.publicationDate).toDateString()}</div>
                                 <div className='news-location'>
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -74,7 +75,7 @@ const ArticlesList = () => {
                                     </svg>
                                     <div>Online</div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className='latest-heading'>{article.title}</div>
                             <div className='latest-text'>{article.summary || 'Learn Why legal Research is a crucial Skill For Law  Students.'}</div>
                             <div className='author'>
@@ -92,6 +93,7 @@ const ArticlesList = () => {
                     </Link>
                 ))}
             </div>
+            <Footer/>
         </div>
     );
 };

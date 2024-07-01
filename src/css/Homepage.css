@@ -198,6 +198,7 @@
 .event-feature {
     display: flex;
     gap: 50px;
+    margin-bottom: 100px;
 }
 
 .event {
@@ -318,6 +319,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    height: 30px;
 }
 
 hr {
@@ -359,5 +361,25 @@ footer {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -45%);
+    
+}
+.event-sec{
+    text-align: left;
+}
+
+.event-sec> .more-button {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    margin-top: 2000px;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+
+@media qu(max-width: 1024px)
+{
+
+
     
 }

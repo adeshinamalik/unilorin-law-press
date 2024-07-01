@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore'; // Importing Timestamp from firebase/firestore
-import { db } from './Firebase/Firebase'; // Assuming db is the Firebase Firestore instance
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from './Firebase/Firebase';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import { images } from './Images';
-
+import Footer from './Footer';
 
 const EventListings = () => {
   const [events, setEvents] = useState([]);
@@ -23,19 +23,25 @@ const EventListings = () => {
       }
     };
 
-    fetchEvents(); // Fetch events when the component is mounted
+    fetchEvents();
   }, []);
 
-  // Loading state check
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
+  };
+
   if (loading) {
     return <div className="loading">Loading events...</div>;
   }
 
-  // No events found check
   if (events.length === 0) {
     return <div className="no-events">No events found</div>;
   }
-  console.log(events[0].Date);
+
   return (
     <div>
       <Navigation />
@@ -51,17 +57,17 @@ const EventListings = () => {
               </div>
               <div className='event-info'>
                 <div className='event-date'>
-                  <div className='event-date'>{event.date instanceof Date ? event.date.toLocaleDateString() : event.date}</div>
-                  <div className='event-location'>
+                  <div className='event-date'>{event.date}</div>
+                  <div className='event-location event-loca'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                     </svg>
-                    <div>{event.location || 'Online'}</div>
+                    <div className='loca'>{event.location || 'Online'}</div>
                   </div>
                 </div>
                 <div className='latest-heading'>{event.title}</div>
-                <div className='latest-text'>{event.description}</div>
+                <div className='latest-text'>{truncateText(event.description, 15)}</div>
                 {event.organizer && (
                   <div className='author'>
                     <div className='author-avatar'>
@@ -71,7 +77,6 @@ const EventListings = () => {
                     </div>
                     <div className='author-info'>
                       <div className='text'>{event.organizer}</div>
-                      <pre>{event.createdAt && new Date(event.createdAt.seconds * 1000).toLocaleDateString()} . {event.readTime || '5'} min read</pre>
                     </div>
                   </div>
                 )}
@@ -80,6 +85,7 @@ const EventListings = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

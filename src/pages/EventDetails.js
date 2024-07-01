@@ -4,6 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from './Firebase/Firebase';
 import '../css/EventDetails.css'; // Import your CSS file for EventDetails styling
 import Navigation from './Navigation';
+import Footer from './Footer';
 
 const EventDetails = () => {
     const { id } = useParams();
@@ -42,10 +43,12 @@ const EventDetails = () => {
 
     // Parse event date
     let eventDate = 'N/A';
-    if (event.eventDate && event.eventDate.seconds) {
-        eventDate = new Date(event.eventDate.seconds * 1000).toLocaleDateString();
+    if (event.date && event.date.seconds) {
+        eventDate = new Date(event.date.seconds * 1000).toLocaleDateString();
     }
 
+    console.log(eventDate);
+    console.table(event);
     // Render event details if event exists
     return (
         <div className='event-detail'>
@@ -53,8 +56,8 @@ const EventDetails = () => {
             <hr />
             <div className="event-detail-container">
                 <h2 className="event-title">{event.title}</h2>
-                <p className="event-date">Date: <i>{eventDate}</i></p>
-                <p className="event-location">Location: <i>{event.location}</i></p>
+                <p className="eventdate"><div><b>Date:</b></div> <i>{event.date}</i></p>
+                <p className="event-locations"><b>Location:</b> <i>{event.location}</i></p>
                 {event.image && <img src={event.image} alt={event.title} className="event-image" />}
                 <div className="event-description">
                     {event.description.split('\n').map((paragraph, index) => (
@@ -63,9 +66,10 @@ const EventDetails = () => {
                         </p>
                     ))}
                 </div>
-                <p className="event-organizer">Organizer: <i>{event.organizerName}</i></p>
+                <p className="event-organizer">Organizer: <i>{event.organizer}</i></p>
                 <p className="event-email">Email: <i>{event.email}</i></p>
             </div>
+            <Footer />
         </div>
     );
 };

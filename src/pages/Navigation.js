@@ -35,7 +35,7 @@ const Navigation = () => {
     return (
         <nav className='nav'>
             {/* <Link to="/" className='logo'>Logo</Link> */}
-            <Link to="/" className='logo'><img src={images.logo} alt='logo'/></Link>
+            <Link to="/" className='logo'><img src={images.logo} alt='logo' /></Link>
             <div className='middle-link'>
                 {/* <div onClick={() => setShowModal(true)}>About us</div> */}
                 <Link to="/blogs">Blogs</Link>
@@ -61,6 +61,24 @@ const Navigation = () => {
                     <div className='login-link' onClick={changeDisplay}>Login</div>
                     <Link to="/signup" className='signup'>Sign up</Link>
                 </div>)}
+            <div className='menu-icon user has-submenu'>
+                <img src={images.menuicon} alt='menuu' />
+                <ul>
+                    <li>
+                        {isLoggedIn ? (<div className='sub right-link'>
+                            <Link onClick={handleSignOut} >Sign Out</Link>
+                        </div>)
+                            :
+                            (<div className='sub right-link'>
+                                <Link className='login-link' onClick={changeDisplay}>Login</Link>
+                                <Link to="/signup" >Sign up</Link>
+                            </div>)}</li>
+                    <li><ProtectedLink to="/postnews">Post News</ProtectedLink></li>
+                    <li><ProtectedLink to="/post-event">Submit an Event</ProtectedLink></li>
+                    <li><ProtectedLink to="/postblog">Contribute a Blog Post</ProtectedLink></li>
+                    <li><ProtectedLink to="/postarticle">Contribute an Article</ProtectedLink></li>
+                </ul>
+            </div>
         </nav>
     )
 }

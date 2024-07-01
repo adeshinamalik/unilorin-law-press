@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import '../css/Homepage.css'
 import '../css/BlogList.css';
 import Navigation from './Navigation';
+import Footer from './Footer';
 
 const BlogList = () => {
     const [blogs, setBlogs] = useState([]);
@@ -38,7 +39,7 @@ if (!blogs) {
     return<div>no blogs</div>
 }
     return (
-        <div className="latest blog-list">
+        <div className=" blog-list">
             <Navigation />
             <div className='fist-element'>Latest</div>
             <div className='latest-section-heading'>Explore Legal Topics and Life</div>
@@ -67,6 +68,7 @@ if (!blogs) {
                     </Link>
                 ))}
             </div>
+            <Footer/>
         </div>
     );
 };

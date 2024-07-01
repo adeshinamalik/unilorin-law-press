@@ -4,6 +4,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { db } from './Firebase/Firebase';
 import '../css/BlogDetail.css'; // Import your CSS file for BlogDetail styling
 import Navigation from './Navigation';
+import Footer from './Footer';
 
 const BlogDetail = () => {
     const { id } = useParams();
@@ -44,7 +45,7 @@ const BlogDetail = () => {
     const contentParagraphs = blog.content.split('\n').map((paragraph, index) => (
         <p key={index} className="blog-paragraph">{paragraph}</p>
     ));
-console.log(blog.content.split('\n'));
+    console.log(blog.content.split('\n'));
     // Render blog details if blog exists
     return (
         <div className='blog-detail'>
@@ -59,6 +60,7 @@ console.log(blog.content.split('\n'));
                     {contentParagraphs}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

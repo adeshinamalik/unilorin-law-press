@@ -218,7 +218,8 @@ const Register = () => {
             <img className="withgoogle1" src={images.googleIconImg} alt="" />
           </div>
         </div>
-        <Link to="/" className="iconimg main-icon" onClick={()=>{setShowLogin(false)}}>icon</Link>
+        <Link to="/" className='logo iconimg main-icon'><img src={images.logo} alt='logo' /></Link>
+
       </div>
     </div>
   );

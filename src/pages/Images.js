@@ -25,6 +25,7 @@ import HafsatSogbade from '../images/HafsatSogbade.jpg'
 import KutiFatihaEniola from '../images/KutiFatihaEniola.jpg'
 import alternateImage from '../images/alternative-image.jpg'
 import logo from '../images/lawpressicon.jpg'
+import menuicon from '../images/menu_icon.svg'
 
 
 export const images = {
@@ -54,5 +55,6 @@ export const images = {
     OlasunkanmiFathiaOdunola,
     KutiFatihaEniola,
     alternateImage,
-    logo
+    logo,
+    menuicon
 };

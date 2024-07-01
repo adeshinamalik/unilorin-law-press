@@ -36,7 +36,7 @@ const BlogHome = () => {
     }
 
     return (
-        <div className="latest blog-list">
+        <div className=" blog-list">
             <div className='lastest-feature'>
                 {blogs.slice(0, 3).map(blog => (
                     <Link to={`/blogs/${blog.id}`} className='latest' key={blog.id}>
@@ -60,7 +60,7 @@ const BlogHome = () => {
                     </Link>
                 ))}
             </div>
-            <Link to='/blogs' className="more-button" onClick={() => navigate('/all-blogs')}>More</Link>
+            <Link to='/blogs' className="more-button" onClick={() => navigate('/blogs')}>More</Link>
         </div>
     );
 };
