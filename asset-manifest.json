@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/unilorin-law-press/static/css/main.c9787f37.css",
+    "main.css": "/unilorin-law-press/static/css/main.08ad71b8.css",
     "main.js": "/unilorin-law-press/static/js/main.6d5c9329.js",
     "static/js/453.0baca8dc.chunk.js": "/unilorin-law-press/static/js/453.0baca8dc.chunk.js",
     "static/media/teamimage1.jpg": "/unilorin-law-press/static/media/teamimage1.206681f04e6bb01e06aa.jpg",
@@ -34,12 +34,12 @@
     "static/media/icons8-facebook.svg": "/unilorin-law-press/static/media/icons8-facebook.1fc810a8e15c60ec41d7d0586cb4c1d5.svg",
     "static/media/theeyeclose.svg": "/unilorin-law-press/static/media/theeyeclose.42ed79d7cc3dc17999935c7962ffa702.svg",
     "static/media/menu_icon.svg": "/unilorin-law-press/static/media/menu_icon.4ae160c2ca21224908f8aa92d937f68a.svg",
-    "main.c9787f37.css.map": "/unilorin-law-press/static/css/main.c9787f37.css.map",
+    "main.08ad71b8.css.map": "/unilorin-law-press/static/css/main.08ad71b8.css.map",
     "main.6d5c9329.js.map": "/unilorin-law-press/static/js/main.6d5c9329.js.map",
     "453.0baca8dc.chunk.js.map": "/unilorin-law-press/static/js/453.0baca8dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9787f37.css",
+    "static/css/main.08ad71b8.css",
     "static/js/main.6d5c9329.js"
   ]
 }
