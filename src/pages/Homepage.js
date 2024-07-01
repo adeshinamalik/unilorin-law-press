@@ -3,7 +3,7 @@ import '../css/Homepage.css'
 import '../css/Mediaqueries.css'
 import { images } from './Images'
 import Login from './Login'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import ThemeContext from './Context/ThemeContext'
 import BlogHome from './BlogHome'
 import Footer from './Footer'
@@ -12,7 +12,15 @@ import EventHome from './EventHome'
 
 
 const Homepage = () => {
-    const { showLogin } = useContext(ThemeContext);
+    const { showLogin, setShowLogin } = useContext(ThemeContext);
+    useEffect(() => {
+        console.log(showLogin);
+        if (showLogin) {
+            setShowLogin(true)
+        }
+
+    }, [showLogin, setShowLogin])
+
 
     return (
         <div>

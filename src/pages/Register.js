@@ -15,12 +15,13 @@ import { auth } from './Firebase/Firebase';
 import { useContext } from 'react';
 import UserContext from './Context/UserContext';
 import ThemeContext from './Context/ThemeContext';
+import { useEffect } from 'react';
 
 
 const Register = () => {
 
   const { isLoggedIn } = useContext(UserContext);
-  const { setShowLogin } = useContext(ThemeContext);
+  const { showLogin, setShowLogin } = useContext(ThemeContext);
 
   console.log(isLoggedIn);
   const [newUserCredentials, setNewUserCredentials] = useState({
@@ -36,15 +37,9 @@ const Register = () => {
   const navigate = useNavigate();
 
 
-  // useEffect(() => {
-  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
-  //     if (user) {
-  //       setIsLoggedIn(true)
-  //       // navigate('/');
-  //     }
-  //   });
-  //   return unsubscribe;
-  // }, [navigate, setIsLoggedIn, theUser])
+  useEffect(() => {
+    setShowLogin(false);
+  }, [setShowLogin])
 
   const validate = (person) => {
     const errors = {};
@@ -94,6 +89,7 @@ const Register = () => {
 
       console.log(userCredential);
       navigate("/");
+      setShowLogin(false);
     } catch (error) {
       console.log(error);
     }
@@ -131,6 +127,7 @@ const Register = () => {
   const toLogin = () => {
     setShowLogin(true);
     console.log("why now");
+    console.log(showLogin);
   }
 
   return (
@@ -219,7 +216,6 @@ const Register = () => {
           </div>
         </div>
         <Link to="/" className='logo iconimg main-icon'><img src={images.logo} alt='logo' /></Link>
-
       </div>
     </div>
   );
